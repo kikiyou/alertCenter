@@ -1,12 +1,12 @@
 package user
 
 import (
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/models"
 	"encoding/json"
 	"strconv"
 	"strings"
 
-	"alertCenter/core/gitlab"
+	"github.com/kikiyou/alertCenter/core/gitlab"
 
 	"github.com/astaxie/beego"
 )

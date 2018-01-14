@@ -2,7 +2,7 @@ package notice
 
 import (
 	//"fmt"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/models"
 	"time"
 
 	"github.com/astaxie/beego"

@@ -1,13 +1,13 @@
 package main
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/core/notice"
-	"alertCenter/core/user"
-	_ "alertCenter/routers"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/notice"
+	"github.com/kikiyou/alertCenter/core/user"
+	_ "github.com/kikiyou/alertCenter/routers"
 	_ "net/http/pprof"
 
-	"alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/core/service"
 
 	"github.com/astaxie/beego"
 )

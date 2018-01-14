@@ -3,15 +3,16 @@ package user
 // 2016.9.20去除了receiver缓存，添加缓存自动刷新线程
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/core/service"
-	"alertCenter/models"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/models"
 
 	"github.com/astaxie/beego"
 	uuid "github.com/satori/go.uuid"
@@ -260,7 +261,8 @@ func (r *Relation) RefreshCache() {
 
 //SetTeam 老方法添加team
 func (r *Relation) SetTeam(team *models.Team) {
-	team.ID = uuid.NewV4().String()
+	u, _ := uuid.NewV4()
+	team.ID = u.String()
 	// if team.WeTag == nil || team.WeTag.TagName == "" {
 	// 	team.WeTag = GetWeTagByName(team.Name)
 	// }
@@ -357,8 +359,9 @@ func GetReceiverByAPPID(appID string) (receiver *models.Receiver) {
 			user := FindUserByMail(mail)
 			us = append(us, user.Name)
 		}
+		u, _ := uuid.NewV4()
 		receiver = &models.Receiver{
-			ID:        uuid.NewV4().String(),
+			ID:        u.String(),
 			Name:      appID,
 			UserNames: us,
 		}
@@ -372,8 +375,9 @@ func GetReceiverByTeam(team string) (receiver *models.Receiver) {
 	t := cacheTeams[team]
 	if t != nil {
 		us := cacheTeamUsers[t.Name]
+		u, _ := uuid.NewV4()
 		receiver = &models.Receiver{
-			ID:        uuid.NewV4().String(),
+			ID:        u.String(),
 			Name:      team,
 			UserNames: us,
 		}
@@ -394,8 +398,9 @@ func GetReceiverByUser(user string) (receiver *models.Receiver) {
 			us = append(us, t.Name)
 		}
 	}
+	u, _ := uuid.NewV4()
 	receiver = &models.Receiver{
-		ID:        uuid.NewV4().String(),
+		ID:        u.String(),
 		Name:      "user_" + user,
 		UserNames: us,
 	}

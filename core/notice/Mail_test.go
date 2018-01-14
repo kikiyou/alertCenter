@@ -8,8 +8,8 @@ import (
 )
 
 func init() {
-	// beego.AppConfigPath = "/Users/Goyoo/gowork/src/alertCenter/conf/app.conf"
-	beego.AppPath = "/Users/Goyoo/gowork/src/alertCenter"
+	// beego.AppConfigPath = "/Users/Goyoo/gowork/src/github.com/kikiyou/alertCenter/conf/app.conf"
+	beego.AppPath = "/Users/Goyoo/gowork/src/github.com/kikiyou/alertCenter"
 }
 
 var mail = `<div><table style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #f6f6f6; margin: 0;" bgcolor="#f6f6f6">

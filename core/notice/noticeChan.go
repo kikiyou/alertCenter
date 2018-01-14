@@ -1,7 +1,7 @@
 package notice
 
 import (
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/models"
 	"fmt"
 )
 

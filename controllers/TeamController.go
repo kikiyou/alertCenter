@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"alertCenter/models"
-	"alertCenter/core/gitlab"
-	"alertCenter/util"
+	"github.com/kikiyou/alertCenter/models"
+	"github.com/kikiyou/alertCenter/core/gitlab"
+	"github.com/kikiyou/alertCenter/util"
 	"fmt"
 )
 

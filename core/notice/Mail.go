@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"alertCenter/core/user"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
 
 	"io/ioutil"
 

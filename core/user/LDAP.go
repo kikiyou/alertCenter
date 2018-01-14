@@ -3,7 +3,7 @@ package user
 import (
 	"fmt"
 
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/models"
 
 	"github.com/astaxie/beego"
 

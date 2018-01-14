@@ -1,9 +1,10 @@
 package service
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/models"
 	"time"
+
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/models"
 
 	"gopkg.in/mgo.v2/bson"
 
@@ -63,8 +64,9 @@ func (e *TokenService) CreateToken(project string, userName string) *models.Toke
 	if old != nil {
 		return old
 	}
+	u, _ := uuid.NewV4()
 	token := &models.Token{
-		Value:      uuid.NewV4().String(),
+		Value:      u.String(),
 		CreateTime: time.Now(),
 		Project:    project,
 		UserName:   userName,

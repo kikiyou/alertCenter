@@ -1,10 +1,11 @@
 package service
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/models"
 	"fmt"
 	"time"
+
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/models"
 
 	mgo "gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
@@ -43,7 +44,9 @@ func (e *IgnoreRuleService) AddRule(rule *models.UserIgnoreRule) {
 	_, err := e.FindRuleByMark(rule.Mark)
 	if err != nil && err.Error() == mgo.ErrNotFound.Error() {
 		rule.AddTime = time.Now()
-		rule.RuleID = uuid.NewV4().String()
+		u, _ := uuid.NewV4()
+		rule.RuleID = u.String()
+		// rule.RuleID = uuid.NewV4().String()
 		rule.IsLive = true
 		e.Session.Insert("IgnoreRule", rule)
 	}

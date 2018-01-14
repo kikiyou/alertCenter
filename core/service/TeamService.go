@@ -1,8 +1,8 @@
 package service
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/models"
 )
 
 type TeamService struct {

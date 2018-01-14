@@ -1,6 +1,6 @@
 package notice
 
-import "alertCenter/models"
+import "github.com/kikiyou/alertCenter/models"
 
 //NoticeServer 发送通知插件接口
 type NoticeServer interface {

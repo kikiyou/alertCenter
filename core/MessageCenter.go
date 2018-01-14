@@ -5,11 +5,11 @@ import (
 
 	"github.com/astaxie/beego"
 
-	"alertCenter/core/db"
-	"alertCenter/core/notice"
-	"alertCenter/core/service"
-	"alertCenter/core/user"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/notice"
+	"github.com/kikiyou/alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
 
 	"gopkg.in/mgo.v2/bson"
 

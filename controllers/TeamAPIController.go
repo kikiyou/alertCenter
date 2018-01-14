@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/core/user"
-	"alertCenter/models"
-	"alertCenter/util"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
+	"github.com/kikiyou/alertCenter/util"
 	"encoding/json"
 
 	"github.com/astaxie/beego"

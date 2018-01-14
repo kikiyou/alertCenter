@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"alertCenter/core"
-	"alertCenter/core/db"
-	"alertCenter/core/service"
-	"alertCenter/core/user"
-	"alertCenter/models"
-	"alertCenter/util"
+	"github.com/kikiyou/alertCenter/core"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
+	"github.com/kikiyou/alertCenter/util"
 	"encoding/json"
 	"strconv"
 	"time"

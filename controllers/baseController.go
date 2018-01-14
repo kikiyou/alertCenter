@@ -1,12 +1,14 @@
 package controllers
 
 import (
-	"alertCenter/controllers/session"
-	"alertCenter/core/db"
-	"alertCenter/core/gitlab"
-	"alertCenter/core/service"
-	"alertCenter/core/user"
+	"fmt"
 	"net/http"
+
+	"github.com/kikiyou/alertCenter/controllers/session"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/gitlab"
+	"github.com/kikiyou/alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/core/user"
 
 	"github.com/astaxie/beego"
 )
@@ -32,7 +34,7 @@ func (this *BaseController) Prepare() {
 	if sessUsername == nil && paramCode == "" {
 
 		sess.Set("redirect", this.Ctx.Request.URL.String()) //为了再次访问的重定向
-		//fmt.Println("in sessUsername == nil && paramCode == nil")
+		fmt.Println("in sessUsername == nil && paramCode == nil")
 		redirct := gitlab.GetGitlabOAuthUrl()
 		http.Redirect(this.Ctx.ResponseWriter, this.Ctx.Request, redirct, http.StatusTemporaryRedirect)
 		return

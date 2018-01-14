@@ -1,7 +1,7 @@
 package gitlab
 
 import (
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/models"
 	"net/url"
 	"os"
 	"strconv"

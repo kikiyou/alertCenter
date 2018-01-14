@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"alertCenter/core/db"
-	"alertCenter/core/user"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
 
 	"github.com/astaxie/beego"
 	"gopkg.in/mgo.v2/bson"

@@ -7,7 +7,7 @@ import (
 )
 
 func Test_GetGitlabAccessToken(t *testing.T) {
-	err := beego.LoadAppConfig("ini", "/Users/qwding/gopath/src/alertCenter/conf/app.conf")
+	err := beego.LoadAppConfig("ini", "/Users/qwding/gopath/src/github.com/kikiyou/alertCenter/conf/app.conf")
 	if err!=nil{
 		t.Error(err)
 		return

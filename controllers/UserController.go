@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"alertCenter/controllers/session"
-	"alertCenter/core/user"
-	"alertCenter/models"
+	"github.com/kikiyou/alertCenter/controllers/session"
+	"github.com/kikiyou/alertCenter/core/user"
+	"github.com/kikiyou/alertCenter/models"
 
 	"github.com/astaxie/beego"
 )

@@ -1,6 +1,6 @@
 package user
 
-import "alertCenter/models"
+import "github.com/kikiyou/alertCenter/models"
 
 type UserInterface interface {
 	//查询所有团队

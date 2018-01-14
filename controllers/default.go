@@ -1,11 +1,11 @@
 package controllers
 
 import (
-	"alertCenter/controllers/session"
+	"github.com/kikiyou/alertCenter/controllers/session"
 	"net/http"
 
 	"github.com/astaxie/beego"
-	"alertCenter/util"
+	"github.com/kikiyou/alertCenter/util"
 )
 
 type MainController struct {

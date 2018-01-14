@@ -1,8 +1,8 @@
 package core
 
 import (
-	"alertCenter/core/db"
-	"alertCenter/core/service"
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/core/service"
 	"fmt"
 	"testing"
 )

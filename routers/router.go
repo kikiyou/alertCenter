@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"alertCenter/controllers"
+	"github.com/kikiyou/alertCenter/controllers"
 
 	"github.com/astaxie/beego"
 )
