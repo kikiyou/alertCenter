@@ -73,6 +73,7 @@ func HandleAlerts(alerts []*models.Alert) {
 	for _, alert := range alerts {
 		//start := time.Now()
 		old, err := alertService.GetAlertByMark(alert.Labels.Fingerprint().String())
+		beego.Debug(alert)
 		if err != nil {
 			if err.Error() == mgo.ErrNotFound.Error() {
 				SaveAlert(alertService, alert)

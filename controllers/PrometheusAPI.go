@@ -1,12 +1,14 @@
 package controllers
 
 import (
+	"encoding/json"
+	"fmt"
+
 	"github.com/kikiyou/alertCenter/core"
 	"github.com/kikiyou/alertCenter/core/db"
 	"github.com/kikiyou/alertCenter/core/service"
 	"github.com/kikiyou/alertCenter/models"
 	"github.com/kikiyou/alertCenter/util"
-	"encoding/json"
 
 	"github.com/astaxie/beego"
 )
@@ -18,6 +20,7 @@ type PrometheusAPI struct {
 //ReceivePrometheus 单独验证prometheus
 func (e *PrometheusAPI) ReceivePrometheus() {
 	ip := e.Ctx.Input.IP()
+	fmt.Println("send ip -> ", ip)
 	configService := &service.GlobalConfigService{
 		Session: db.GetMongoSession(),
 	}
@@ -31,6 +34,7 @@ func (e *PrometheusAPI) ReceivePrometheus() {
 			err := json.Unmarshal(data, &Alerts)
 			if err == nil {
 				core.HandleAlerts(Alerts)
+				beego.Debug(Alerts)
 				e.Data["json"] = util.GetSuccessJson("receive alert success")
 			} else {
 				e.Data["json"] = util.GetErrorJson("receive a unknow data")

@@ -50,6 +50,6 @@ alerts1='[
     }
 
 ]'
-curl -XPOST -d"$alerts1"  http://alert.yiyun.pro/api/v1/alerts
-curl -XPOST -d"$alerts1" http://alert.yiyun.pro/api/v1/alerts
-curl -XPOST -d"$alerts1" http://alert.yiyun.pro/api/v1/alerts
+curl -XPOST -d"$alerts1"  http://127.0.0.1:8888/api/v1/alerts
+curl -XPOST -d"$alerts1" http://127.0.0.1:8888/api/v1/alerts
+curl -XPOST -d"$alerts1" http://127.0.0.1:8888/api/v1/alerts

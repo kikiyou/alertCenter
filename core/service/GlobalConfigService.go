@@ -1,10 +1,11 @@
 package service
 
 import (
-	"github.com/kikiyou/alertCenter/core/db"
-	"github.com/kikiyou/alertCenter/models"
 	"fmt"
 	"time"
+
+	"github.com/kikiyou/alertCenter/core/db"
+	"github.com/kikiyou/alertCenter/models"
 
 	"github.com/astaxie/beego"
 	mgo "gopkg.in/mgo.v2"
@@ -127,7 +128,9 @@ func (e *GlobalConfigService) GetAllConfig(name string) (configs []*models.Globa
 func (e *GlobalConfigService) CheckExist(name string, value interface{}) (bool, error) {
 	if globalConfigs != nil {
 		for _, config := range globalConfigs {
-			//beego.Debug(config.Name, name, config.Value, value)
+			beego.Debug(config.Name, name, config.Value, value)
+			fmt.Println(name)
+			fmt.Println(value)
 			if config.Name == name && config.Value.(string) == value.(string) {
 				return true, nil
 			}

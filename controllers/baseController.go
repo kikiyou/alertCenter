@@ -28,6 +28,8 @@ func (this *BaseController) Prepare() {
 	defer sess.SessionRelease(this.Ctx.ResponseWriter)
 
 	sessUsername := sess.Get(session.SESSION_USERNAME)
+	sessUsername = "yh"
+
 	paramCode := this.GetString("code")
 	//fmt.Printf("paramCode: %s,session: %#v\n", paramCode, sess)
 
